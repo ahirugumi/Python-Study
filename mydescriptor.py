@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-class MyDescriptor(object):
+class MyDescriptor(object):  #ディスクリプタ
     def __init__(self, val):
         print('__init__', val)
         self.val = val
@@ -17,7 +17,7 @@ class MyDescriptor(object):
         print('__delete__', self.val)
 
 class MyClass(object):
-    des=MyDescriptor("foo")
+    des=MyDescriptor("foo")  #属性としてセット。ここポイント
 
 if __name__ == "__main__":
     my=MyClass()    #init
