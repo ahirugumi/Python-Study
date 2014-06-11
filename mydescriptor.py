@@ -14,7 +14,8 @@ class MyDescriptor(object):  #ディスクリプタ
         self.val = val
 
     def __delete__(self, ins):
-        print('__delete__', self.val)
+        print('__delete__')
+        del self.val
 
 class MyClass(object):
     des=MyDescriptor("foo")  #属性としてセット。ここポイント
